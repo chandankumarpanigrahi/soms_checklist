@@ -52,9 +52,9 @@ body {
 }
 
 .check_item {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
     background-color: #ffffff0f;
-    /* padding-bottom: 0.25rem; */
+    padding-bottom: 0.25rem;
     padding-left: 2.5rem;
     border-radius: 1rem;
     width: 280px;
@@ -141,4 +141,28 @@ select:focus {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #5874d0;
+}
+
+.select_item{
+    background-color: #1a264e;
+    color: #ffffff;
+    border-color: #131d3f;
+    width: 100%;
+    border-radius: 6rem;
+    /* margin-left: 0.5rem; */
+    /* margin-top: 0.5rem; */
+}
+
+.check_item.check_item_selection{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.reset_button{
+    
+}
+
+.reset_button i::before{
+    font-size: 2.5rem;
+    color: red;
 }
