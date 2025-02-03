@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoMS Check List</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+
+<body>
+    <div class="body">
+        <div class="warning_area">
+            <div class="warning">
+                <img src="./assets/images/logo_dark.png" alt="wide logo" class="wise_screen_logo">
+                <div>Please Use in Side/Split Mode</div>
+            </div>
+        </div>
+        <div class="workarea">
+            <div class="work_body">
+                <div class="title">
+                    <img src="./assets/images/logo_light.png" alt="wide logo" class="narrow_logo">
+                    <h1>SoMS Check List</h1>
+                </div>
+            </div>
+            <div class="check_list_area">
+                <div class="check_list">
+                    <div class="check_item form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="age">
+                        <label class="form-check-label" for="age">Age</label>
+                    </div>
+                    <div class="check_item form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="caste">
+                        <label class="form-check-label" for="caste">Caste</label>
+                    </div>
+                    <div class="check_item form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="gender">
+                        <label class="form-check-label" for="gender">Gender</label>
+                    </div>
+                    <label class="form-check-label mb-2" for="course">Course</label>
+                    <div class="check_item form-check ps-0">
+                        <select class="form-select mb-3" id="course_item">
+                            <option value="" selected>Select Course</option>
+                            <option value="DNS">DNS</option>
+                            <option value="BScN">BSc in Nautical Science</option>
+                            <option value="GME">GME</option>
+                            <option value="GPR">GPR</option>
+                            <option value="ETO">ETO</option>
+                            <option value="CCMC">CCMC</option>
+                        </select>
+
+                        <div class="all_sub_check_list">
+                            <div class="sub_check_list" data-course="DNS BScN">
+                                <div class="sub_check_item form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="IMUCET">
+                                    <label class="form-check-label" for="IMUCET">IMUCET</label>
+                                </div>
+                                <div class="sub_check_item form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="pcm">
+                                    <label class="form-check-label" for="pcm">PCM %</label>
+                                </div>
+                                <div class="sub_check_item form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="twelth">
+                                    <label class="form-check-label" for="twelth">12th %</label>
+                                </div>
+                            </div>
+
+                            <div class="sub_check_list" data-course="GME">
+                                <div class="sub_check_item form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="btech">
+                                    <label class="form-check-label" for="btech">B.Tech</label>
+                                </div>
+                                <div class="sub_check_item form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="mtech">
+                                    <label class="form-check-label" for="mtech">M.Tech</label>
+                                </div>
+                            </div>
+
+                            <div class="sub_check_list" data-course="GPR CCMC">
+                                <div class="sub_check_item form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="tenth">
+                                    <label class="form-check-label" for="tenth">10th Mark</label>
+                                </div>
+                                <div class="sub_check_item form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="tenth_eng">
+                                    <label class="form-check-label" for="tenth_eng">10th English</label>
+                                </div>
+                            </div>
+
+                            <div class="sub_check_list" data-course="ETO">
+                                <div class="sub_check_item form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="be">
+                                    <label class="form-check-label" for="be">BE</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="check_item form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="passport">
+                        <label class="form-check-label" for="passport">Passport</label>
+                    </div>
+                    <div class="check_item form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="aadhaar">
+                        <label class="form-check-label" for="aadhaar">Aadhaar Card</label>
+                    </div>
+                    <label class="form-label ps-0">Medical Fitness</label>
+                    <div class="sub_check_list_none" id="GPR">
+                        <div class="sub_check_item form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="cb">
+                            <label class="form-check-label" for="cb">Color Blindness</label>
+                        </div>
+                        <div class="sub_check_item form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="disability">
+                            <label class="form-check-label" for="disability">Disability</label>
+                        </div>
+                    </div>
+                </div>
+                <button id="resetBtn" class="btn btn-danger mt-3">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $(".sub_check_list").hide(); // Hide all sub check lists initially
+
+            $("#course_item").change(function () {
+                var selectedCourse = $(this).val(); // Get the selected course
+
+                $(".sub_check_list").hide(); // Hide all lists
+
+                if (selectedCourse) {
+                    $('.sub_check_list').each(function () {
+                        var courses = $(this).data("course").split(" ");
+                        if (courses.includes(selectedCourse)) {
+                            $(this).show();
+                        }
+                    });
+                }
+            });
+        });
+        $("#resetBtn").click(function () {
+            $(".form-check-input").prop("checked", false); // Uncheck all checkboxes
+            $("#course_item").val("").trigger("change"); // Reset dropdown and trigger change event
+        });
+
+    </script>
+</body>
+
+</html>

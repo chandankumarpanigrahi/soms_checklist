@@ -1,0 +1,31 @@
+@media screen and (min-width:550px) {
+    .body .warning_area{
+        display: block;
+    }
+    
+    .body .workarea{
+        display: none;
+    }
+
+    .warning{
+        width: 250px;
+        height: 550px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid red;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 20px;
+        color: red;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wise_screen_logo{
+        width: 80%;
+    }
+}
