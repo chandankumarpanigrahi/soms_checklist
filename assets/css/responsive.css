@@ -1,13 +1,16 @@
 @media screen and (min-width:550px) {
-    .body .warning_area{
-        display: block;
+    .body .warning_area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
     }
-    
-    .body .workarea{
+
+    .body .workarea {
         display: none;
     }
 
-    .warning{
+    .warning {
         width: 250px;
         height: 550px;
         margin: 0 auto;
@@ -25,7 +28,7 @@
         align-items: center;
     }
 
-    .wise_screen_logo{
+    .wise_screen_logo {
         width: 80%;
     }
 }
