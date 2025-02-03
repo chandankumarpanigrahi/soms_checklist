@@ -185,6 +185,17 @@
                 $("#female_scholarship").hide(); // Hide scholarship checkbox
             });
         });
+        document.addEventListener("DOMContentLoaded", function () {
+            document.addEventListener("contextmenu", function (e) {
+                e.preventDefault();
+            });
+        });
+
+        document.addEventListener("keydown", function (e) {
+            if (e.ctrlKey) {
+                e.preventDefault();
+            }
+        });
 
     </script>
 </body>
