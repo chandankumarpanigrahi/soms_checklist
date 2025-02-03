@@ -1,6 +1,5 @@
 body {
     background-color: #040f33;
-    /* overflow: hidden; */
     font-family: "Comfortaa", serif;
     min-height: 100vh;
     display: flex;
@@ -13,6 +12,7 @@ body {
 
 .body .workarea {
     display: block;
+    position: relative;
 }
 
 .title {
@@ -92,3 +92,49 @@ input:focus,
 select:focus {
     box-shadow: none !important;
 }
+
+.footer{
+    position: fixed;
+    bottom: auto;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff1f;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+.author{
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.author a{
+    color: #d8e1ff;
+    text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #354b93; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5874d0; 
+  }
