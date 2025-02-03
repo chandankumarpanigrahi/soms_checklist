@@ -48,15 +48,19 @@ body {
 }
 
 .check_list {
-    max-width: 280px;
+    max-width: 320px;
 }
 
 .check_item {
     margin-bottom: 0.5rem;
     background-color: #ffffff0f;
-    padding-bottom: 0.25rem;
+    /* padding-bottom: 0.25rem; */
     padding-left: 2.5rem;
     border-radius: 1rem;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .sub_check_item {
@@ -79,12 +83,12 @@ body {
 }
 
 input[type="checkbox"] {
-    transform: scale(1.3);
-    margin: 10px;
+    /* transform: scale(1.2); */
+    /* margin: 10px; */
 }
 
 label {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #fff;
 }
 
@@ -93,7 +97,7 @@ select:focus {
     box-shadow: none !important;
 }
 
-.footer{
+.footer {
     position: fixed;
     bottom: auto;
     left: 0;
@@ -107,12 +111,12 @@ select:focus {
     padding: 2px;
 }
 
-.author{
+.author {
     color: #fff;
     font-size: 0.8rem;
 }
 
-.author a{
+.author a {
     color: #d8e1ff;
     text-decoration: none;
 }
@@ -120,21 +124,21 @@ select:focus {
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #354b93; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #354b93;
     border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #5874d0; 
-  }
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #5874d0;
+}

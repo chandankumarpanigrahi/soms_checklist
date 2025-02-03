@@ -37,10 +37,26 @@
                         <input class="form-check-input" type="checkbox" value="" id="caste">
                         <label class="form-check-label" for="caste">Caste</label>
                     </div>
+
+                    <!-- Gender Section -->
+                    <label class="form-check-label mb-2">Gender</label>
                     <div class="check_item form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="gender">
-                        <label class="form-check-label" for="gender">Gender</label>
+                        <input class="form-check-input gender-select" type="radio" name="gender" id="male">
+                        <label class="form-check-label" for="male">Male</label>
                     </div>
+                    <div class="check_item form-check">
+                        <input class="form-check-input gender-select" type="radio" name="gender" id="female">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+
+                    <!-- Scholarship Checkbox (Visible for Female only) -->
+                    <div class="sub_check_list_none" id="female_scholarship" style="display: none;">
+                        <div class="sub_check_item form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="scholarship">
+                            <label class="form-check-label" for="scholarship">Scholarship (1 Lakh)</label>
+                        </div>
+                    </div>
+
                     <label class="form-check-label mb-2" for="course">Course</label>
                     <div class="check_item form-check ps-0">
                         <select class="form-select mb-3" id="course_item">
@@ -137,11 +153,10 @@
         $(document).ready(function () {
             $(".sub_check_list").hide(); // Hide all sub check lists initially
 
+            // Show/hide course-specific checklists
             $("#course_item").change(function () {
-                var selectedCourse = $(this).val(); // Get the selected course
-
-                $(".sub_check_list").hide(); // Hide all lists
-
+                var selectedCourse = $(this).val();
+                $(".sub_check_list").hide();
                 if (selectedCourse) {
                     $('.sub_check_list').each(function () {
                         var courses = $(this).data("course").split(" ");
@@ -151,10 +166,23 @@
                     });
                 }
             });
-        });
-        $("#resetBtn").click(function () {
-            $(".form-check-input").prop("checked", false); // Uncheck all checkboxes
-            $("#course_item").val("").trigger("change"); // Reset dropdown and trigger change event
+
+            // Show scholarship checkbox if Female is selected
+            $(".gender-select").change(function () {
+                if ($("#female").is(":checked")) {
+                    $("#female_scholarship").slideDown();
+                } else {
+                    $("#female_scholarship").slideUp();
+                }
+            });
+
+            // Reset button functionality
+            $("#resetBtn").click(function () {
+                $(".form-check-input").prop("checked", false);
+                $("#course_item").val("").trigger("change"); // Reset course selection
+                $(".gender-select").prop("checked", false); // Reset gender selection
+                $("#female_scholarship").hide(); // Hide scholarship checkbox
+            });
         });
 
     </script>
